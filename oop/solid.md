@@ -11,20 +11,20 @@ SOLID е акроним от първите букви на 5 основни п�
 - **I**nterface segregation principle: "Clients should not be forced to depend upon interfaces that they do not use.";  
 - **D**ependency inversion principle: "Depend upon abstractions, concretions.".  
   
-Най-важните според Виктор Цветков по време не Телерик Академията, са първият и последния и всички останали биха могли да се нарекат второстепенни и органичо идващи си, ако започнем да ползвяме пътвият и послендия принцип.  
+Най-важните според Виктор Цветков по време не Телерик Академията, са първият и последния и всички останали биха могли да се нарекат второстепенни и органично идващи си, ако започнем да ползвяме пътвият и послендия принцип.  
 А именно **S**ingle-responsibility principle и **D**ependency inversion.  
   
 #### Какво е **S**ingle-responsibility principle  
-Single Responsibility Principle - A _class or function should only have one reason to change_
+**S**ingle Responsibility Principle - A _class or function should only have one reason to change_
 
 #### Какво е **O**pen–closed principle  
-O: Open-Closed Principle - _A software artifact should be open for extension but closed for modification_
+**O**pen-Closed Principle - _A software artifact should be open for extension but closed for modification_
 
 #### Какво е **L**iskov substitution principle  
-L: Liskov-Substitution Principle - Introduced by Barbara Liskov in the 1980s. This principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application. That requires the objects of the subclasses to behave in the same way as the objects of the superclass.
+**L**iskov-Substitution Principle - Introduced by Barbara Liskov in the 1980s. This principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application. That requires the objects of the subclasses to behave in the same way as the objects of the superclass.
 
 #### Какво е **I**nterface segregation principle  
-I: Interface Segregation Principle - Prevent classes from relying on things that they don’t need
+**I**nterface Segregation Principle - Prevent classes from relying on things that they don’t need
 
 #### Какво е **D**ependency inversion principle
-D: Dependency Inversion Principle - Abstractions should not depend on details. Details should depend on abstractions
+**D**ependency Inversion Principle - Abstractions should not depend on details. Details should depend on abstractions
