@@ -1,3 +1,5 @@
+Mamfred Steyer
+
 https://www.angulararchitects.io/
 https://www.angulararchitects.io/en/blog/
 https://www.angulararchitects.io/en/angular-workshops/
