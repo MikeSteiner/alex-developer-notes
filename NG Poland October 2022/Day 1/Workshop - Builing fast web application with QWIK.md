@@ -1,3 +1,4 @@
+Misko Hevery
 
 -   [slides](https://docs.google.com/presentation/d/1UNKyLC-KJsYcRHS813bi0bv6-f1Sv1nczIOOxh11y8A/edit)
 -   [Streaming demo](https://qwik-multi-worker-main.devdash.workers.dev/)
