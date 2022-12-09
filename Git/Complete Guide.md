@@ -1,3 +1,16 @@
+#Git #GitGuide
+
+```toc
+style: number
+min_depth: number (default: 2)
+max_depth: number (default: 6)
+title: string (default: undefined)
+allow_inconsistent_headings: boolean (default: false)
+delimiter: string (default: |)
+varied_style: boolean (default: false)
+```
+
+
 ### Introduction: What is GIT?
 
 Git is a free and open-source distributed version control system, which is designed to handle everything from small to very large projects with speed and efficiency.
@@ -33,7 +46,8 @@ Therefore, for large projects that involve thousands of developers, Git helps th
 -   Allows multiple developers to work together.
 -   Supports non-linear development because of its thousands of parallel branches.
 
-### 2. Features of Git
+### 2. Featu
+res of Git
 
 -   Free and open-source
 -   Tracks history
