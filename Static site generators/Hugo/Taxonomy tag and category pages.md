@@ -1,4 +1,3 @@
-https://sam.hooke.me/note/2018/03/hugo-tag-and-category-pages/
 
 #Hugo #Taxonomy 
 # Hugo tag and category pages
@@ -44,4 +43,5 @@ tag = ""
 category = ""
 ```
 
-
+---
+https://sam.hooke.me/note/2018/03/hugo-tag-and-category-pages/
