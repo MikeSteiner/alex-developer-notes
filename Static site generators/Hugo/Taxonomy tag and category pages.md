@@ -23,7 +23,7 @@ You can then go to `https://mywebsite.com/tag/` to view the list of tags.
 
 ## Templates [](https://sam.hooke.me/note/2018/03/hugo-tag-and-category-pages/#templates)
 
-In order to customise things further, you can modify the templates used:
+In order to customize things further, you can modify the templates used:
 
 -   `layouts/_default/terms.html` is the template for `https://mywebsite.com/tag/`, which lists all the terms for that tag.
 -   `layouts/_default/taxonomy.html` is the template for `https://mywebsite.com/tag/term/`, which lists all the pages for that term.
