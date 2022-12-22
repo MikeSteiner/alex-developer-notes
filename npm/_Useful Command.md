@@ -139,5 +139,3 @@ _authToken=MYTOKEN
 ; would apply only to @another
 
 //somewhere-else.com/another/:_authToken=MYTOKEN2
-
-### [](https://docs.npmjs.com/cli/v9/configuring-npm/npmrc#see-also)See also

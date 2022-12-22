@@ -15,13 +15,25 @@ git init [repository name]
 #### Config
 
 This command is a function that is used to set configuration values on a global or local level. It can be used to set the author name and email ID with commit.
-**Usage:**
 
+For (global) default email (which is configured in your ~/.gitconfig):
+
+**Usage:**
 ```
 git config -global user.name "[name]"
-
 git config -global user.email "[email]"
 ```
+
+For just one repo, go into to the relevant repo DIR and:
+
+```
+git config user.name "Your Name Here"
+git config user.email your@email.example
+```
+
+You can check your Git settings with: `git config user.name && git config user.email`
+
+If you are in a specific repo which you setup a new user/config for (different to global) then it should show that local config, otherwise it will show your global config.
 
 ---
 #### Clone
