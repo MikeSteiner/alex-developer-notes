@@ -306,7 +306,7 @@ NullInjector            празен, на всяка заявка отгова�
 
 **В NgModule приложенията** мястото на `EnvironmentInjector` заема `ModuleInjector`. Той събира в едно всички `providers` от модула и от всички модули, които той импортира рекурсивно. Lazy-loaded модулите създават дъщерни `ModuleInjector`-и, точно както router-ът създава дъщерни environment injectors в standalone приложенията.
 
-На кое мястото в йерархията е стоял `ModuleInjector`. Той е предшественикът на **`EnvironmentInjector`**, а не на `ElementInjector`.
+На мястото на коя йерархия е стоял `ModuleInjector`. Той е предшественикът на **`EnvironmentInjector`**, а не на `ElementInjector`.
 
 Във всяка версия на Angular е имало и има две йерархии. Променило се е само името и начинът на конфигуриране на едната от тях.
 
