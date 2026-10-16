@@ -4,7 +4,7 @@ tags: [browser, event-loop, angular, zone-js, zoneless, change-detection, rxjs-s
 ---
 # Event loop в Angular: Zone.js, change detection и планирането на работа
 
-Този файл свързва модела от [[browser-event-loop]] с Angular. Основните понятия идват от javascript.info. Връзката с Angular е от документацията на Angular и от общото познаване на framework-а. Детайлите за вътрешната имплементация на Zone.js и на zoneless scheduler-а са описани на нивото, нужно за интервю, а не като спецификация.
+Този файл свързва модела от [[browser-event-loop]] с Angular. Основните понятия идват от javascript.info. Връзката с Angular е от документацията на Angular и от общото познаване на framework-а. *Детайлите за вътрешната имплементация на Zone.js и на zoneless scheduler-а са описани на нивото, нужно за интервю, а не като спецификация.*
 
 ## Защо Angular изобщо се интересува от event loop-а
 
@@ -83,12 +83,12 @@ Event loop-ът обяснява защо и двата варианта „ра
 
 RxJS позволява да се избере в коя опашка да се изпълни работата чрез **schedulers**. Всеки от тях съответства на механизъм от event loop-а.
 
-| Scheduler | Механизъм в браузъра | Кога се изпълнява |
-|---|---|---|
-| `queueScheduler` | синхронно | веднага, в текущия call stack |
-| `asapScheduler` | microtask | след текущия код, преди рендериране |
-| `asyncScheduler` | `setTimeout`, macrotask | в следващ цикъл |
-| `animationFrameScheduler` | `requestAnimationFrame` | преди следващия кадър |
+| Scheduler                 | Механизъм в браузъра    | Кога се изпълнява                   |
+| ------------------------- | ----------------------- | ----------------------------------- |
+| `queueScheduler`          | синхронно               | веднага, в текущия call stack       |
+| `asapScheduler`           | microtask               | след текущия код, преди рендериране |
+| `asyncScheduler`          | `setTimeout`, macrotask | в следващ цикъл                     |
+| `animationFrameScheduler` | `requestAnimationFrame` | преди следващия кадър               |
 
 `asyncScheduler` е по подразбиране за всички оператори, които работят с време. Такива са `debounceTime`, `delay`, `throttleTime`, `interval` и `timer`. Затова `debounceTime(300)` в търсенето от [[rxjs-flattening-operators]] е всъщност таймер, тоест макрозадача. Със Zone.js тя задейства change detection, когато изтече.
 
