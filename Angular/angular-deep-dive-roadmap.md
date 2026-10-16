@@ -22,11 +22,11 @@
 
 ## 2. Directives и pipes
 
-- Attribute директиви
-- Структурни директиви и защо `*` е захар за `<ng-template>`
-- `hostDirectives`: композиция вместо наследяване
-- Pure и impure pipes, защо `async` pipe е impure
-- Собствени pipes и вградените pipes
+- Attribute директиви [[angular-directives-pipes]]
+- Структурни директиви и защо `*` е захар за `<ng-template>` [[angular-directives-pipes]]
+- `hostDirectives`: композиция вместо наследяване [[angular-directives-pipes]]
+- Pure и impure pipes, защо `async` pipe е impure [[angular-directives-pipes]]
+- Собствени pipes и вградените pipes [[angular-directives-pipes]]
 
 ## 3. ★ Change Detection
 
@@ -88,8 +88,8 @@ https://angular.dev/guide/di
 
 ## 7. Routing
 
-- Lazy loading: `loadComponent`, `loadChildren`
-- Функционални guards и resolvers
+- Lazy loading: `loadComponent`, `loadChildren` [[angular-routing]]
+- Функционални guards и resolvers [[angular-routing]]
 - Route-level providers, връзка с DI [[angular-dependency-injection]]
 - Bundle size и code splitting
 
@@ -103,7 +103,7 @@ https://angular.dev/guide/di
 
 ## 9. HTTP Client
 
-- Функционални interceptors
+- Функционални interceptors [[angular-http-client]]
 - Глобална обработка на грешки в interceptor [[rxjs-error-handling]]
 
 ## 10. Рендериране и производителност
