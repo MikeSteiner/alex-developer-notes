@@ -18,7 +18,7 @@ Event loop-ът е безкрайният цикъл, който свързва 
 ## Архитектурата в една схема
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph JS["Main thread"]
         CS["Call stack<br/>текущо изпълняван код"]
     end
