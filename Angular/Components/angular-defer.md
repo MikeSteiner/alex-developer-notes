@@ -67,15 +67,15 @@ Lazy routes с `loadComponent` и `loadChildren` отлагат код на ни
 
 Тригерът определя кога блокът се зарежда. Задава се с `on` или `when`. Няколко тригера, разделени с `;`, работят като „или“: блокът се зарежда при първия изпълнил се. Без тригер по подразбиране се използва `on idle`.
 
-| Тригер | Кога зарежда |
-|---|---|
-| `on idle` | Когато браузърът е свободен, чрез `requestIdleCallback`. Приема таймаут: `on idle(500)` |
-| `on viewport` | Когато елементът влезе в екрана, чрез `IntersectionObserver` |
-| `on interaction` | При `click` или `keydown` върху елемента |
-| `on hover` | При `mouseover` или `focusin` върху елемента |
-| `on immediate` | Веднага, след като неотложеното съдържание е рендерирано |
-| `on timer(2s)` | След зададено време |
-| `when condition` | Когато изразът стане истинен |
+| Тригер           | Кога зарежда                                                                            |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| `on idle`        | Когато браузърът е свободен, чрез `requestIdleCallback`. Приема таймаут: `on idle(500)` |
+| `on viewport`    | Когато елементът влезе в екрана, чрез `IntersectionObserver`                            |
+| `on interaction` | При `click` или `keydown` върху елемента                                                |
+| `on hover`       | При `mouseover` или `focusin` върху елемента                                            |
+| `on immediate`   | Веднага, след като неотложеното съдържание е рендерирано                                |
+| `on timer(2s)`   | След зададено време                                                                     |
+| `when condition` | Когато изразът стане истинен                                                            |
 
 `viewport`, `interaction` и `hover` по подразбиране наблюдават **placeholder-а**. Той трябва да има един корен елемент. Може да се посочи и друг елемент чрез template reference променлива: `on interaction(trigger)` за `<button #trigger>`. `on viewport` приема и обект с опциите на `IntersectionObserver`, с изключение на `root`, например `on viewport({ trigger: section, rootMargin: '200px' })`. С `rootMargin` блокът започва да се зарежда малко преди да стане видим.
 
