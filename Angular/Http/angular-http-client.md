@@ -53,7 +53,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
 Interceptors се изпълняват в реда, в който са подадени на `withInterceptors`. Заявката минава през тях отвън навътре, а отговорът се връща **в обратен ред**, защото всеки interceptor обвива потока, върнат от `next`.
 
 ```mermaid
-flowchart LR
+flowchart TB
     App["Компонент"] --> A["auth"]
     A --> E["error"]
     E --> L["loading"]

@@ -14,8 +14,8 @@ https://angular.dev/guide/components/lifecycle
 
 Документацията разделя hooks в четири фази. При създаването е `constructor`, обикновеният JavaScript конструктор, който се изпълнява при инстанцирането. Към change detection спадат:
 
-- `ngOnInit`
 - `ngOnChanges`
+- `ngOnInit`
 - `ngDoCheck`
 - `ngAfterContentInit`
 - `ngAfterContentChecked`
@@ -24,9 +24,15 @@ https://angular.dev/guide/components/lifecycle
 
 Към рендерирането спадат `afterNextRender` и `afterEveryRender`. При унищожаването е `ngOnDestroy`.
 
+## Последователност
+
+`constructor` → `ngOnChanges` → `ngOnInit` → `ngDoCheck` → `ngAfterContentInit` → `ngAfterContentChecked` → `ngAfterViewInit` → `ngAfterViewChecked` → `ngOnDestroy`
+
+При всеки следващ цикъл на change detection остават само `ngOnChanges` (ако има промяна в input), `ngDoCheck`, `ngAfterContentChecked` и `ngAfterViewChecked`. Hooks с `Init` в името се изпълняват само веднъж. `ngOnDestroy` е накрая, преди унищожаването.
+
 ## `ngOnInit` и `ngOnChanges`
 
-`ngOnInit` се изпълнява точно веднъж, след като Angular е инициализирал всички inputs с началните им стойности. Това става преди инициализацията на собствения темплейт, затова тук може да се изгради състояние въз основа на началните inputs. `ngOnChanges` се изпълнява при всяка промяна на inputs и винаги преди проверката на темплейта. При инициализация първото `ngOnChanges` идва преди `ngOnInit`.
+`ngOnInit` се изпълнява точно веднъж, след като Angular е инициализирал всички inputs с началните им стойности. Това става преди инициализацията на собствения темплейт, затова тук може да се изгради състояние въз основа на началните inputs. `ngOnChanges` се изпълнява при всяка промяна на inputs и винаги преди проверката на темплейта. **`ngOnChanges` не се изпълнява при всеки change detection.** Това е най-сериозната грешка, защото описа `ngDoCheck`. При инициализация първото `ngOnChanges` идва преди `ngOnInit`.
 
 Hook-ът получава аргумент `SimpleChanges`. Това е `Record` от име на input към `SimpleChange`, който съдържа `previousValue`, `currentValue` и `firstChange`. За по-строга типизация може да се подаде класът като generic, например `SimpleChanges<UserProfile>`. Ако input има `alias`, ключът в записа остава името на TypeScript свойството, а не алиасът.
 
